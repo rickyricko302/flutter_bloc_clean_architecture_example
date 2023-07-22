@@ -17,8 +17,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       GetRandomQuotesEvent event, Emitter<HomeState> emit) async {
     try {
       emit(HomeLoading());
-      List<QuotesEntity> entity =
-          await getRandomQuotesUseCase.getRandomQuotes();
+      QuotesEntity entity = await getRandomQuotesUseCase.getRandomQuotes();
       emit(HomeSuccess(data: entity));
     } catch (e) {
       emit(HomeError(textError: e.toString()));

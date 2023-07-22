@@ -5,7 +5,7 @@ import 'package:flutter_bloc_clean_architecture_example/presentation/widgets/pop
 class ItemQuotesWidget extends StatelessWidget {
   const ItemQuotesWidget({Key? key, required this.quotesEntity})
       : super(key: key);
-  final QuotesEntity quotesEntity;
+  final Result quotesEntity;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class ItemQuotesWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: PoppinsText(
-              text: quotesEntity.quote ?? "",
+              text: quotesEntity.indo ?? "",
               fontSize: 18,
               textAlign: TextAlign.center,
             ),

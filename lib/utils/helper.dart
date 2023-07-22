@@ -16,7 +16,7 @@ class Helper {
     String? url = response.request?.url.toString();
     int statusCode = response.statusCode;
     String body = response.body;
-    String msg = "- url  : $url\n- code : $statusCode\n-body : $body";
+    String msg = "- url  : $url\n- code : $statusCode\n- body : $body";
     log(msg);
     return msg;
   }

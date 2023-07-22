@@ -12,7 +12,7 @@ class HomeInitial extends HomeState {}
 class HomeLoading extends HomeState {}
 
 class HomeSuccess extends HomeState {
-  final List<QuotesEntity> data;
+  final QuotesEntity data;
   const HomeSuccess({required this.data});
   @override
   List<Object> get props => [data];

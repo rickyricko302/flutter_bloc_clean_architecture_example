@@ -1,7 +1,15 @@
 class QuotesEntity {
-  String? anime;
-  String? character;
-  String? quote;
+  bool? sukses;
+  List<Result>? result;
 
-  QuotesEntity({this.anime, this.character, this.quote});
+  QuotesEntity({this.sukses, this.result});
+}
+
+class Result {
+  int? id;
+  String? english;
+  String? indo;
+  String? character;
+  String? anime;
+  Result({this.id, this.english, this.indo, this.character, this.anime});
 }

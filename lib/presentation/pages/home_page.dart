@@ -25,14 +25,15 @@ class HomePage extends StatelessWidget {
                     parent: BouncingScrollPhysics()),
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, top: 20, bottom: 90),
-                itemCount: state.data.length,
+                itemCount: state.data.result?.length ?? 0,
                 separatorBuilder: (context, index) {
                   return const SizedBox(
                     height: 20,
                   );
                 },
                 itemBuilder: (context, index) {
-                  return ItemQuotesWidget(quotesEntity: state.data[index]);
+                  return ItemQuotesWidget(
+                      quotesEntity: state.data.result![index]);
                 });
           } else if (state is HomeError) {
             return Center(
