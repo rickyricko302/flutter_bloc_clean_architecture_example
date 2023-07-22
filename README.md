@@ -3,4 +3,4 @@
 Belajar clean architecture menggunakan flutter bloc :)
 
 # screenshoot
-![](https://raw.githubusercontent.com/rickyricko302/flutter_bloc_clean_architecture_example/main/ss.jpg)
+<img src="https://raw.githubusercontent.com/rickyricko302/flutter_bloc_clean_architecture_example/main/ss.jpg" height=680/>
