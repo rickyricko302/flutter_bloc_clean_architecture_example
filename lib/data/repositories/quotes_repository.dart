@@ -12,6 +12,9 @@ class QuotesRepositoryImp implements QuotesRepository {
   final http.Client client;
   QuotesRepositoryImp(this.client);
 
+  /// Fungsi untuk mendapatkan quotes anime secara random. Gunakan fungsi ini di usecase Anda
+  ///
+  /// return `QuotesModel` ketika berhasil dan throw `String` pesan error ketika gagal
   @override
   Future<QuotesModel> getRandomQuotes() async {
     var response = await client.get(

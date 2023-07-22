@@ -7,6 +7,20 @@ class GetRandomQuotesUseCase {
   final QuotesRepositoryImp quotesRepositoryImp;
   GetRandomQuotesUseCase({required this.quotesRepositoryImp});
 
+  /// Fungsi ini untuk mendapatkan quotes anime random melalui `QuotesRepository`.
+  ///
+  /// Gunakan fungsi ini di Bloc / Cubit dan gunakan try catch untuk error handling.
+  ///
+  /// contoh :
+  /// ```
+  /// try{
+  ///   QuotesEntity entity = await GetRandomQuotesUseCase().getRandomQuotes();
+  /// }catch(e){
+  ///   print(e.toString());
+  /// }
+  /// ```
+  ///
+  /// return `QuotesEntity` ketika berhasil dan throw `String` pesan error ketika gagal
   Future<entity.QuotesEntity> getRandomQuotes() async {
     QuotesModel data = await quotesRepositoryImp.getRandomQuotes();
     List<entity.Result> res = [];
